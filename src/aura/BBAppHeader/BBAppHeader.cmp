@@ -6,7 +6,7 @@
                     <div class="slds-media">
                         <div class="slds-media__figure">
                             <span class="slds-icon__container slds-icon-standard-account">
-                                <c:svg class="slds-icon" xlinkHref="/resource/slds080/assets/icons/standard-sprite/svg/symbols.svg#account" />
+                                <c:BBsvg class="slds-icon" xlinkHref="/resource/BB_SLDS080/assets/icons/standard-sprite/svg/symbols.svg#account" />
                                 <span class="slds-assistive-text">Account Icon</span>
                             </span>
                         </div>
