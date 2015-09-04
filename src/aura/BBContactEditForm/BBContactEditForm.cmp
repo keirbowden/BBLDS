@@ -1,0 +1,16 @@
+<aura:component >
+    <aura:attribute name="contact" type="Contact" />
+    <div class="slds-text-heading--medium slds-p-top--x-small slds-p-bottom--x-small">Edit Contact</div>
+    <div class="slds-form-element">
+        <label class="slds-form-element__label" for="firstname">First Name</label>
+        <div class="slds-form-element__control">
+            <ui:inputText aura:id="firstname" value="{!v.contact.FirstName}" class="slds-input" placeholder="..." />
+        </div>
+    </div>
+    <div class="slds-form-element">
+        <label class="slds-form-element__label" for="lastname">Last Name</label>
+        <div class="slds-form-element__control">
+            <ui:inputText aura:id="lastname" value="{!v.contact.LastName}" class="slds-input" placeholder="..." />
+        </div>
+    </div>
+</aura:component>
