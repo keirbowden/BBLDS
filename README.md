@@ -6,7 +6,7 @@ Install the unmanaged package via the following link :
 https://login.salesforce.com/packaging/installPackage.apexp?p0=04t24000000Ml0t
 
 ## Sample 1 - Account and Contacts Edit
-See the blog post at : http://www.bobbuzzard.blogspot.com...
+See the blog post at : http://bobbuzzard.blogspot.co.uk/2015/09/lightning-design-system-edit-parent-and.html
 
 Access the page via a URL similar to the following - note that if you do not supply an accountId parameter you will receive an internal server error!
 
