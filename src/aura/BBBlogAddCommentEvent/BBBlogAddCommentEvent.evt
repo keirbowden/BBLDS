@@ -1,0 +1,5 @@
+<aura:event type="COMPONENT" description="New Comment Event">
+    <aura:attribute type="String" name="BlogId" />
+    <aura:attribute type="String" name="Name" />
+    <aura:attribute type="String" name="Body" />
+</aura:event>

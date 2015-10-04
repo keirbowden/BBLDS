@@ -1,0 +1,24 @@
+<aura:component >
+    <div class="slds-p-around--small">
+        <div class="slds-card slds-theme--default">
+            <div class="slds-card__header slds-theme--alt-inverse  slds-grid">
+                <div class="slds-media slds-media--center slds-has-flexi-truncate">
+                    <div class="slds-media__figure">
+                        <c:BBsvg class="slds-icon" xlinkHref="/resource/BB_SLDS091/assets/icons/utility-sprite/svg/symbols.svg#user" />
+                    </div>
+                    <div class="slds-media__body">
+                        <h2 class="slds-text-heading--small slds-truncate">About Me</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-card__body slds-theme--default slds-m-left--medium">
+                <div>
+					I'm also known as Keir Bowden and I'm CTO of BrightGen, a 
+                    Salesforce Platinum Cloud Alliance partner in the UK
+                </div>
+            </div>
+            <div class="slds-card__footer slds-theme--shade">
+            </div>
+        </div>
+    </div>
+</aura:component>

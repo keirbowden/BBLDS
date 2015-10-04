@@ -1,0 +1,6 @@
+/* hide medium and above */
+@media all and (min-width: 768px) {
+	.THIS .medium-hide {
+        display:none;
+	}
+}

@@ -1,0 +1,34 @@
+<aura:component >
+	<aura:registerEvent name="SearchEvent" type="c:BBBlogSearchEvent"/> 
+    
+    <div class="slds-p-around--small">
+        <div class="slds-card slds-theme--default">
+            <div class="slds-card__header slds-theme--alt-inverse  slds-grid">
+                <div class="slds-media slds-media--center slds-has-flexi-truncate">
+                    <div class="slds-media__figure">
+                        <c:BBsvg class="slds-icon" xlinkHref="/resource/BB_SLDS091/assets/icons/utility-sprite/svg/symbols.svg#user" />
+                    </div>
+                    <div class="slds-media__body">
+                        <h2 class="slds-text-heading--small slds-truncate">Search</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-card__body slds-theme--default slds-m-left--medium">
+                <div>
+                    <div class="slds-form-element">
+                        <div class="slds-form-element__control">
+                            <input aura:id="searchTerms" class="slds-input" type="text" placeholder="Enter search terms ..." />
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="slds-card__footer slds-theme--shade">
+                <div class="slds-grid">
+                <div class="slds-container--right ">                    
+                    <button class="slds-button slds-button--brand" onclick="{!c.search}">Go</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,87 @@
+<aura:component >
+    <aura:attribute name="blogWrappers" type="BB_LTG_BlogPostController.BlogWrapper" />
+	<aura:registerEvent name="AddCommentEvent" type="c:BBBlogAddCommentEvent"/> 
+    <aura:handler event="aura:doneRendering" action="{!c.doneRendering}"/>
+    
+    <aura:iteration items="{!v.blogWrappers}" var="wrap">
+        <div class="slds-p-around--small">
+            <div class="slds-card slds-theme--default">
+                <div class="slds-card__header slds-theme--alt-inverse  slds-grid">
+                    <div class="slds-media slds-media--center slds-has-flexi-truncate">
+                        <div class="slds-media__figure">
+                            <c:BBsvg class="slds-icon" xlinkHref="/resource/BB_SLDS091/assets/icons/standard-sprite/svg/symbols.svg#post" />
+                        </div>
+                        <div class="slds-media__body">
+                            <h2 class="slds-text-heading--small slds-truncate">{!wrap.blog.Name}</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-card__body slds-theme--default slds-m-left--medium">
+                    <div>
+                        <span data-picture="1" data-alt="Blog Image" class="text-center">
+                            <span data-src="{!'/servlet/servlet.FileDownload?file=' + wrap.blog.Small_Image_Id__c}"></span>
+                            <span data-src="{!'/servlet/servlet.FileDownload?file=' + wrap.blog.Medium_Image_Id__c}" data-media="(min-width: 48em)"></span>
+                            <span data-src="{!'/servlet/servlet.FileDownload?file=' + wrap.blog.Large_Image_Id__c}" data-media="(min-width: 64em)"></span>
+                        </span>
+                    </div>
+                    <div>
+                        {!wrap.blog.Content__c}
+                    </div>
+                </div>
+                <div class="slds-card__footer slds-theme--shade">
+                    <span style="font-style: italic">{!wrap.blog.Author__r.Name},&nbsp;<ui:outputDate value="{!wrap.blog.Date_Posted__c}" /></span>          
+                    <div class="slds-float--right">                    
+                        <c:BBsvg class="slds-icon slds-icon-text-default slds-icon--small" xlinkHref="/resource/BB_SLDS091/assets/icons/standard-sprite/svg/symbols.svg#post" />
+                        &nbsp;<span style="font-style: italic">{!wrap.commentCount}</span>
+                    </div>
+                </div>
+            </div>
+            <span class="slds-x-small-show">
+                <div class="medium-hide">
+                	<div class="slds-grid slds-wrap">
+                    	<div class="slds-col slds-size--1-of-1">
+	                        <button id="{!'com-' + wrap.blog.Id}" onclick="{!c.toggleComments}">{!wrap.showHideText} Comments</button>
+        	            </div>
+            	    </div>
+                </div>
+            </span>
+            <div id="{!'comments-' + wrap.blog.Id}" aura:id="{!'comments-' + wrap.blog.Id}" class="slds-medium-show">
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size--1-of-1 slds-m-top--medium">
+                        <div class="slds-box slds-theme--success slds-theme--inverse-text">
+                            <h3 class="slds-text-heading--small">Comments</h3>
+                        </div>
+                    </div>
+                </div>  
+                <aura:iteration items="{!wrap.blog.Blog_Comments__r}" var="comment">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size--1-of-1 slds-m-left--medium">
+                            {!comment.Body__c}
+                        </div>
+                        <div class="slds-col slds-size--1-of-1">
+                            <div class="slds-float--right slds-m-right--medium">                    
+                                <span style="font-style:italic">{!comment.Name__c},&nbsp;<ui:outputDate value="{!comment.Posted__c}"/></span>
+                            </div>
+                        </div>
+                    </div>
+                </aura:iteration>
+                <div class="slds-p-around--small">
+                    <div>
+                        New Comment
+                    </div>
+		                <div class="slds-form-element">
+    		                <div class="slds-form-element__control">
+        		                <input id="{!'newcomname-' + wrap.blog.Id}" class="slds-input" type="text" placeholder="Name" />
+            		        </div>
+                		    <div class="slds-form-element__control">
+                    		    <input id="{!'newcombody-' + wrap.blog.Id}" class="slds-input" type="text" placeholder="Comment ..." />
+	                    	</div>
+	    	                <div class="slds-form-element__control">
+		    	                <button id="{!'newcom-' + wrap.blog.Id}" onclick="{!c.saveComment}">Save</button>
+        	    	        </div>
+            	    	</div> 
+                </div>
+                </div>
+        </div>
+    </aura:iteration>
+</aura:component>
