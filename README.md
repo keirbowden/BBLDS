@@ -15,3 +15,14 @@ https://_instance_.lightning.force.com/bblightning/BBAccountContactEdit.app?acco
 e.g.
 
 https://na17.lightning.force.com/bblightning/BBAccountContactEdit.app?accountId=001o000000GXMt3
+
+## Sample 2 - Responsive Design
+See the blog post at : http://bobbuzzard.blogspot.co.uk/2015/10...
+
+Access the page via a URL similar to the following:
+
+https://_instance_.lightning.force.com/bblightning/BBBlogHome.app
+
+e.g.
+
+https://na17.lightning.force.com/bblightning/BBBlogHome.app
