@@ -17,7 +17,7 @@ e.g.
 https://na17.lightning.force.com/bblightning/BBAccountContactEdit.app?accountId=001o000000GXMt3
 
 ## Sample 2 - Responsive Design
-See the blog post at : http://bobbuzzard.blogspot.co.uk/2015/10...
+See the blog post at : http://bobbuzzard.blogspot.co.uk/2015/10/responsive-design-with-lightning-design.html
 
 Create a tab for the 'Blog Post' custom object and create a few blog posts. I usually add the images as attachments to the record and copy the ID from there. Your mileage may vary with other options.
 
