@@ -1,0 +1,34 @@
+<aura:component >
+        <div class="slds-page-header">
+            <div class="slds-grid">
+                <div class="slds-col slds-has-flexi-truncate">
+                    <div class="slds-media">
+                        <div class="slds-media__figure">
+                            <span class="slds-icon__container slds-icon-standard-account">
+                                <c:BBsvg class="slds-icon" xlinkHref="/resource/BB_SLDS091/assets/icons/standard-sprite/svg/symbols.svg#article" />
+                                <span class="slds-assistive-text">Timeline Icon</span>
+                            </span>
+                        </div>
+                        <div class="slds-media__body">
+                            <p class="slds-text-heading--label">Timeline Sample</p>
+                            <div class="slds-grid">
+                                <h1 class="slds-text-heading--medium slds-m-right--small slds-truncate slds-align-middle" title="App Title">Opportunity Timeline</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-grid slds-page-header__detail-row">
+                <div class="slds-col--padded slds-size--1-of-4">
+                    <dl>
+                        <dt>
+                            <p class="slds-truncate" title="Bob Buzzard LDS Sample">Bob Buzzard LDS Sample</p>
+                        </dt>
+                        <dd>
+                            <p class="slds-text-body--regular slds-truncate" title="Opportunity Timeline">Opportunity Timeline</p>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+</aura:component>

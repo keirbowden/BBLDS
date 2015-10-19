@@ -1,0 +1,15 @@
+<apex:page sidebar="false" showHeader="false" standardStylesheets="false">
+    <apex:includeScript value="/lightning/lightning.out.js" />
+    <div id="lightning"/>
+
+    <script>
+        $Lightning.use("c:BBAccountOppTimelineApp", function() {
+            $Lightning.createComponent("c:BBAccountOppTimeline",
+                  { "recordId" : "{!$CurrentPage.parameters.id}" },
+                  "lightning",
+                  function(cmp) {
+                    // do some stuff
+              });
+        });    
+    </script>
+</apex:page>

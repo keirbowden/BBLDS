@@ -1,0 +1,47 @@
+<aura:component controller="BB_LTG_AccountOppTimelineCtrl">
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="timeline" type="BB_LTG_Timeline" />
+    
+    <ltng:require styles="/resource/BB_SLDS091/assets/styles/salesforce-lightning-design-system-ltng.css" 
+                  afterScriptsLoaded="{!c.doInit}" />
+    
+    <div class="slds">
+        <c:BBAccountOppTimelineHeader />
+        <ul class="slds-timeline">
+            <p class="slds-m-around--medium"><a href="#">{!v.timeline.name}</a></p>
+            <aura:iteration items="{!v.timeline.entries}" var="entry">
+                <li class="slds-timeline__item">
+                    <span class="slds-assistive-text">Event</span>
+                    <div class="slds-media slds-media--reverse">
+                        <div class="slds-media__figure">
+                            <div class="slds-timeline__actions">
+                                <button class="slds-button slds-button--icon-border-filled">
+                                    <c:BBsvg class="slds-icon slds-icon-standard-event slds-timeline__icon" xlinkHref="/resource/BB_SLDS091/assets/icons/standard-sprite/svg/symbols.svg#event" />
+                                    <span class="slds-assistive-text">Opportunity</span>
+                                </button>
+                                <p class="slds-timeline__date"><ui:outputDate value="{!entry.theDate}" /></p>
+                            </div>
+                        </div>
+                        <div class="slds-media__body">
+                            <div class="slds-media slds-media--timeline slds-timeline__media--event">
+                                <div class="slds-media__figure">
+                                    <c:BBsvg class="slds-icon slds-icon-standard-opportunity slds-timeline__icon" xlinkHref="/resource/BB_SLDS091/assets/icons/standard-sprite/svg/symbols.svg#opportunity" />
+                                </div>
+                                <div class="slds-media__body">
+                                    <ul class="slds-list--vertical slds-text-body--small">
+                                        <li class="slds-list__item slds-m-right--large">
+                                            <dl class="slds-dl--inline">
+                                                <dt class="slds-dl--inline__label">Description:</dt>
+                                                <dd class="slds-dl--inline__detail"><a href="#">{!entry.description}</a></dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </aura:iteration>
+        </ul>    
+    </div>
+</aura:component>
