@@ -29,7 +29,7 @@ e.g.
 
 https://bblds-test-dev-ed.lightning.force.com/bblightning/BBBlogHome.app
 
-## Sample 3 - Acttivity Timeline, Lighting Components and Visualforce
+## Sample 3 - LDS Activity Timeline, Lightning Components and Visualforce
 See the blog post at : http://bobbuzzard.blogspot.co.uk/2015/10/lds-activity-timeline-lightning.html
 
 Access the page via a URL similar to the following:
