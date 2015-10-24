@@ -34,7 +34,7 @@ See the blog post at : http://bobbuzzard.blogspot.co.uk/2015/10/lds-activity-tim
 
 Access the page via a URL similar to the following:
 
-https://_domain_._instance_.visual.force.com/apex/AccountOppTimeline?id=00124000005U5ox
+https://_domain_._instance_.visual.force.com/apex/AccountOppTimeline?id=_accountId_
 
 e.g.
 
