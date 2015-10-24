@@ -3,7 +3,7 @@
 ## Getting Started
 Install the unmanaged package via the following link :
 
-https://login.salesforce.com/packaging/installPackage.apexp?p0=04t24000000Ml0t
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t24000000N92h
 
 ## Sample 1 - Account and Contacts Edit
 See the blog post at : http://bobbuzzard.blogspot.co.uk/2015/09/lightning-design-system-edit-parent-and.html
@@ -30,7 +30,7 @@ e.g.
 https://bblds-test-dev-ed.lightning.force.com/bblightning/BBBlogHome.app
 
 ## Sample 3 - Acttivity Timeline, Lighting Components and Visualforce
-See the blog post at : http://bobbuzzard.blogspot.co.uk/2015/10/responsive-design-with-lightning-design.html
+See the blog post at : http://bobbuzzard.blogspot.co.uk/2015/10/lds-activity-timeline-lightning.html
 
 Access the page via a URL similar to the following:
 
