@@ -1,0 +1,20 @@
+<apex:page sidebar="false" showHeader="false" standardStylesheets="false">
+    <apex:includeScript value="/lightning/lightning.out.js" />
+    <div id="lightning"/>
+ 
+    <script>
+        $Lightning.use("c:BBSObjectBoardOutApp", function() {
+            $Lightning.createComponent("c:BBSObjectBoard",
+                                       {
+								'SObjectType': 'Lead',
+								'StageValueField' : 'Status',
+								'FieldNames' : 'Company, FirstName, LastName, LeadSource',
+								'ExcludeValues': 'Converted',
+										},
+                  "lightning",
+                  function(cmp) {
+                    // no further setup required - yet!
+              });
+        });
+    </script>
+</apex:page>

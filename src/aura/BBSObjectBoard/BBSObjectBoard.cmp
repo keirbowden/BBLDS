@@ -1,0 +1,45 @@
+<aura:component controller="BB_LTG_SObjectBoardCtrl" implements="flexipage:availableForAllPageTypes">
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <aura:attribute name="SObjectType" type="String" default="Case" />
+    <aura:attribute name="StageValueField" type="String" default="Status" />
+    <aura:attribute name="StageConfigField" type="String" />
+    <aura:attribute name="FieldNames" type="String" default="CaseNumber,Subject" />
+    <aura:attribute name="ExcludeValues" type="String" default="Closed" />
+
+    <aura:attribute name="Stages" type="BB_LTG_BoardStage" />
+    <aura:attribute name="ColumnWidth" type="String" />
+    
+    <ltng:require styles="/resource/BB_SLDS_0_12_1/assets/styles/salesforce-lightning-design-system-ltng.css" />
+    <div class="slds">
+	<div class="slds-m-around--large">
+    <table style="table-layout: fixed;">
+            <tr>
+	    <aura:iteration items="{!v.Stages}" var="stage">
+            <th style="{!'width:' + v.ColumnWidth + '%'}"><h3 class="slds-section-title--divider slds-text-align--center">{!stage.stageName}</h3></th>
+    	</aura:iteration>
+            </tr>
+            <tr>
+	    <aura:iteration items="{!v.Stages}" var="stage">
+            <td style="{!'width:' + v.ColumnWidth + '%; vertical-align:top'}">
+		    <aura:iteration items="{!stage.sobjects}" var="sobject">
+				<ul class="slds-list--vertical slds-has-cards--space has-selections">
+				  <li class="slds-list__item slds-m-around--x-small">
+				    <div class="slds-tile slds-tile--board">
+				      <p class="slds-tile__title slds-truncate slds-text-heading--medium">{!sobject.titleField.fieldValue}</p>
+    				  <div class="slds-tile__detail">
+	               <aura:iteration items="{!sobject.fields}" var="field">
+				        <p class="slds-truncate">{!field.fieldName} : {!field.fieldValue}</p>
+                    </aura:iteration>
+				      </div>
+			    </div>
+			  </li> 
+                </ul>
+            </aura:iteration>
+            </td>
+    	</aura:iteration>
+        </tr>
+    </table>
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,12 @@
+<design:component label="BoardAnything">
+	<design:attribute name="SObjectType" label="SObject Type" 
+                      description="Type of SObject to board, e.g. Case" />
+	<design:attribute name="StageValueField" label="Stage Field" 
+                      description="Name of field containing the stage the SObject is at, e.g. Status" />
+	<design:attribute name="StageConfigField" label="Stage Config Field" 
+                      description="Optional - Name of field with the configuration  of the stages" />
+	<design:attribute name="FieldNames" label="Field Names to display" 
+                      description="Comma seperated names of the fields to display in each SObject card, e.g. CaseNumber,Subject" />
+	<design:attribute name="ExcludeValues" label="Stage values to exclude" 
+                      description="Optional - Comma seperated list of stage values to exclude, e.g. Closed" />
+</design:component>
