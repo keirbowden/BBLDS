@@ -39,3 +39,24 @@ https://_domain_._instance_.visual.force.com/apex/AccountOppTimeline?id=_account
 e.g.
 
 https://bblds-dev-ed--c.eu5.visual.force.com/apex/AccountOppTimeline?id=00124000005U5ox
+
+## Sample 45 - Board Anything with SLDS and Lightning Components
+
+See the blog post at : http://bobbuzzard.blogspot.co.uk/2016/01/board-anything-with-slds-and-lightning.html
+
+Access the Lead Board Visualforce page via a URL similar to the following:
+
+https://_domain_._instance_.visual.force.com/apex/BBLeadBoard
+
+e.g.
+
+https://bblds-dev-ed--c.eu5.visual.force.com/apex/BBLeadBoard
+
+Access the default case view app board via a URL similar to the following:
+
+https://_domain_.lightning.force.com/c/BBSObjectBoardApp.app
+
+e.g.
+
+https://bblds-dev-ed.lightning.force.com/c/BBSObjectBoardApp.app
+
