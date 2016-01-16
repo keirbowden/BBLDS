@@ -3,7 +3,7 @@
 ## Getting Started
 Install the unmanaged package via the following link :
 
-https://login.salesforce.com/packaging/installPackage.apexp?p0=04t24000000N92h
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t24000000AiWo
 
 ## Sample 1 - Account and Contacts Edit
 See the blog post at : http://bobbuzzard.blogspot.co.uk/2015/09/lightning-design-system-edit-parent-and.html
@@ -40,7 +40,7 @@ e.g.
 
 https://bblds-dev-ed--c.eu5.visual.force.com/apex/AccountOppTimeline?id=00124000005U5ox
 
-## Sample 45 - Board Anything with SLDS and Lightning Components
+## Sample 4 - Board Anything with SLDS and Lightning Components
 
 See the blog post at : http://bobbuzzard.blogspot.co.uk/2016/01/board-anything-with-slds-and-lightning.html
 
