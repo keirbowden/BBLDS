@@ -60,3 +60,14 @@ e.g.
 
 https://bblds-dev-ed.lightning.force.com/c/BBSObjectBoardApp.app
 
+## Sample 5 - Lightning Design System in Visualforce Part 1 - Getting Started
+
+See the blog post at:
+
+Access the page through a URL similar to the following : 
+
+https://_domain_._instance_.visual.force.com/apex/BBLDS_VF_Record?id=_AccountId_
+
+e.g.
+
+https://bblds-test-dev-ed--bblightning.na17.visual.force.com/apex/BBLDS_VF_Record?id=001o000000Bb0km
