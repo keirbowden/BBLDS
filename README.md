@@ -3,7 +3,9 @@
 ## Getting Started
 Install the unmanaged package via the following link :
 
-https://login.salesforce.com/packaging/installPackage.apexp?p0=04t24000000AiWo
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t24000000Aibe
+
+(If you've installed an earlier version, you'll need to uninstall that before installing the latest, as unmanaged packages can't be upgraded.
 
 ## Sample 1 - Account and Contacts Edit
 See the blog post at : http://bobbuzzard.blogspot.co.uk/2015/09/lightning-design-system-edit-parent-and.html
