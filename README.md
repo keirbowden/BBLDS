@@ -64,7 +64,7 @@ https://bblds-dev-ed.lightning.force.com/c/BBSObjectBoardApp.app
 
 ## Sample 5 - Lightning Design System in Visualforce Part 1 - Getting Started
 
-See the blog post at:
+See the blog post at : http://bobbuzzard.blogspot.co.uk/2016/12/lightning-design-system-in-visualforce.html
 
 Access the page through a URL similar to the following : 
 
