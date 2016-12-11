@@ -1,0 +1,114 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false"
+           standardController="Account" applyHTmlTag="false">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <body>
+            <apex:stylesheet value="{!URLFOR($Resource.BBLDS_W17, 
+                                    'assets/styles/salesforce-lightning-design-system-vf.min.css')}" />
+            
+            <div class="BBLDS">
+                <div class="slds-page-header" role="banner">
+                    <div class="slds-grid">
+                        <div class="slds-col slds-has-flexi-truncate">
+                            <div class="slds-media slds-no-space slds-grow">
+                                <div class="slds-media__figure">
+                                    <svg aria-hidden="true" class="slds-icon slds-icon-standard-account">
+                                        <use xlink:href="{!URLFOR($Resource.BBLDS_W17, '/assets/icons/standard-sprite/svg/symbols.svg#account')}"></use>
+                                    </svg>
+                                </div>
+                                <div class="slds-media__body">
+                                    <p class="slds-text-title--caps slds-line-height--reset">Account</p>
+                                    <h1 class="slds-page-header__title slds-m-right--small slds-align-middle slds-truncate" title="{!Account.Name}">{!Account.Name}</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="slds-grid slds-page-header__detail-row">
+                        <li class="slds-page-header__detail-block">
+                            <p class="slds-text-title slds-truncate slds-m-bottom--xx-small" title="Description">Description</p>
+                            <p class="slds-text-body--regular slds-truncate" title="{!Account.Description}">{!Account.Description}</p>
+                        </li>
+                        <li class="slds-page-header__detail-block">
+                            <p class="slds-text-title slds-truncate slds-m-bottom--xx-small" title="Industry">Industry</p>{!Account.Industry}
+                        </li>
+                        <li class="slds-page-header__detail-block">
+                            <p class="slds-text-title slds-truncate slds-m-bottom--xx-small" title="Visualforce">Visualforce</p>Yes I'm a Visualforce Page!
+                        </li>
+                    </ul>
+                </div>    
+                
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-p-horizontal--small slds-size--1-of-1 slds-m-top--large">
+                        <h3 class="slds-text-heading--small slds-m-bottom--medium">Account Information</h3>
+                    </div>
+                    <div class="slds-p-horizontal--small slds-size--1-of-2">
+                        <div class="slds-form-element slds-hint-parent slds-has-divider--bottom">
+                            <span class="slds-form-element__label">Name</span>
+                            <div class="slds-form-element__control">
+                                <span class="slds-form-element__static">{!Account.Name}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-p-horizontal--small slds-size--1-of-2">
+                        <div class="slds-form-element slds-hint-parent slds-has-divider--bottom">
+                            <span class="slds-form-element__label">Description</span>
+                            <div class="slds-form-element__control">
+                                <span class="slds-form-element__static">{!Account.Description}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-p-horizontal--small slds-size--1-of-2">
+                        <div class="slds-form-element slds-hint-parent slds-has-divider--bottom">
+                            <span class="slds-form-element__label">Website</span>
+                            <div class="slds-form-element__control">
+                                <span class="slds-form-element__static">{!Account.Website}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-p-horizontal--small slds-size--1-of-2">
+                        <div class="slds-form-element slds-hint-parent slds-has-divider--bottom">
+                            <span class="slds-form-element__label">Phone</span>
+                            <div class="slds-form-element__control">
+                                <span class="slds-form-element__static">{!Account.Phone}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-p-horizontal--small slds-size--1-of-2">
+                        <div class="slds-form-element slds-hint-parent slds-has-divider--bottom">
+                            <span class="slds-form-element__label">Type</span>
+                            <div class="slds-form-element__control">
+                                <span class="slds-form-element__static">{!Account.Type}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-p-horizontal--small slds-size--1-of-2">
+                        <div class="slds-form-element slds-hint-parent slds-has-divider--bottom">
+                            <span class="slds-form-element__label">Fax</span>
+                            <div class="slds-form-element__control">
+                                <span class="slds-form-element__static">{!Account.Fax}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-p-horizontal--small slds-size--1-of-1 slds-m-top--large">
+                        <h3 class="slds-text-heading--small slds-m-bottom--medium">System Information</h3>
+                    </div>
+                    <div class="slds-p-horizontal--small slds-size--1-of-2">
+                        <div class="slds-form-element slds-hint-parent slds-has-divider--bottom">
+                            <span class="slds-form-element__label">Created By</span>
+                            <div class="slds-form-element__control">
+                                <span class="slds-form-element__static">{!Account.CreatedBy.Name},&nbsp;<apex:outputField value="{!Account.CreatedDate}"/></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-p-horizontal--small slds-size--1-of-2">
+                        <div class="slds-form-element slds-hint-parent slds-has-divider--bottom">
+                            <span class="slds-form-element__label">Last Modified By</span>
+                            <div class="slds-form-element__control">
+                                <span class="slds-form-element__static">{!Account.LastModifiedBy.Name},&nbsp;<apex:outputField value="{!Account.LastModifiedDate}"/></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </html>
+</apex:page>
