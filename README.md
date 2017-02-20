@@ -3,7 +3,7 @@
 ## Getting Started
 Install the unmanaged package via the following link :
 
-https://login.salesforce.com/packaging/installPackage.apexp?p0=04t24000000Aibe
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t24000000ApM1
 
 (If you've installed an earlier version, you'll need to uninstall that before installing the latest, as unmanaged packages can't be upgraded.
 
@@ -72,4 +72,16 @@ https://_domain_._instance_.visual.force.com/apex/BBLDS_VF_Record?id=_AccountId_
 
 e.g.
 
-https://bblds-test-dev-ed--bblightning.na17.visual.force.com/apex/BBLDS_VF_Record?id=001o000000Bb0km
+https://bblds-dev-ed--c.eu5.visual.force.com/apex/BBLDS_VF_Form?id=00324000012S3jT
+
+## Sample 6 - Lightning Design System in Visualforce Part 2 - Forms
+
+See the blog post at : http://bobbuzzard.blogspot.co.uk/2017/02/lightning-design-system-in-visualforce.html
+
+Access the page through a URL similar to the following : 
+
+https://_domain_._instance_.visual.force.com/apex/BBLDS_VF_Form?id=_ContactId_
+
+e.g.
+
+https://bblds-dev-ed--c.eu5.visual.force.com/apex/BBLDS_VF_Form?id=00324000012S3jT
