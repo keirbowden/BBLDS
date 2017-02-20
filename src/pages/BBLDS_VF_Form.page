@@ -1,0 +1,135 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="true"
+           standardController="Contact" applyHTmlTag="false">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <head>
+            <apex:slds />
+        </head>
+        <body class="slds-scope">
+            <div class="slds-page-header" role="banner">
+                <div class="slds-grid">
+                    <div class="slds-col slds-has-flexi-truncate">
+                        <div class="slds-media slds-no-space slds-grow">
+                            <div class="slds-media__figure">
+                                <svg aria-hidden="true" class="slds-icon slds-icon-standard-contact">
+                                    <use xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/standard-sprite/svg/symbols.svg#contact')}"></use>
+                                </svg>
+                            </div>
+                            <apex:outputPanel styleClass="slds-media__body" rendered="{!LEN(Contact.LastName)>0}">
+                                <p class="slds-text-title--caps slds-line-height--reset">Edit Contact</p>
+                                <h1 class="slds-page-header__title slds-m-right--small slds-align-middle slds-truncate" title="{!Contact.FirstName} {!Contact.LastName}">{!Contact.FirstName} {!Contact.LastName}</h1>
+                            </apex:outputPanel>
+                            <apex:outputPanel styleClass="slds-media__body" rendered="{!LEN(Contact.LastName)==0}">
+                                <p class="slds-text-title--caps slds-line-height--reset">Create Contact</p>
+                                <h1 class="slds-page-header__title slds-m-right--small slds-align-middle slds-truncate" title="New Contact">New Contact</h1>
+                            </apex:outputPanel>
+                        </div>
+                    </div>
+                </div>
+                <ul class="slds-grid slds-page-header__detail-row">
+                    <apex:outputPanel rendered="{!LEN(Contact.LastName)>0}" layout="none">
+                        <li class="slds-page-header__detail-block">
+                            <p class="slds-text-title slds-truncate slds-m-bottom--xx-small" title="Account">Account</p>
+                            <p class="slds-text-body--regular slds-truncate"><apex:outputField value="{!Contact.AccountId}"/></p>
+                        </li>
+                    </apex:outputPanel>
+                    <li class="slds-page-header__detail-block">
+                        <p class="slds-text-title slds-truncate slds-m-bottom--xx-small" title="Visualforce">SLDS Visualforce </p>
+                        <p class="slds-text-body--regular slds-truncate">Part 2 - Forms</p>
+                    </li>
+                </ul>
+            </div>    
+                
+            <apex:form >
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-p-horizontal--small slds-size--1-of-1 slds-m-top--large">
+                        <h3 class="slds-text-heading--small slds-m-bottom--medium">Contact Information</h3>
+                    </div>
+                    <div class="slds-p-horizontal--small slds-size--1-of-2">
+                        <div class="slds-form-element slds-hint-parent">
+                            <span class="slds-form-element__label">First Name</span>
+                            <div class="slds-form-element__control">
+                                <apex:inputField styleClass="slds-input" value="{!Contact.FirstName}"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-p-horizontal--small slds-size--1-of-2">
+                        <div class="slds-form-element slds-hint-parent">
+                            <span class="slds-form-element__label"><abbr class="slds-required" title="required">*</abbr>Last Name</span>
+                            <div class="slds-form-element__control">
+                                <apex:inputField styleClass="slds-input" value="{!Contact.LastName}"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-p-horizontal--small slds-size--1-of-2">
+                        <div class="slds-form-element slds-hint-parent">
+                            <span class="slds-form-element__label">Account</span>
+                            <div class="slds-form-element__control">
+                                <apex:inputField style="width:97%; line-height:1.875em;" value="{!Contact.AccountId}" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-p-horizontal--small slds-size--1-of-2">
+                        <div class="slds-form-element slds-hint-parent">
+                            <span class="slds-form-element__label">Department</span>
+                            <div class="slds-form-element__control">
+                                <apex:inputField styleClass="slds-input" value="{!Contact.Department}" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-p-horizontal--small slds-size--1-of-2">
+                        <div class="slds-form-element slds-hint-parent">
+                            <span class="slds-form-element__label">Mailing Street</span>
+                            <div class="slds-form-element__control">
+                                <apex:inputField styleClass="slds-input" value="{!Contact.MailingStreet}"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-p-horizontal--small slds-size--1-of-2">
+                        <div class="slds-form-element slds-hint-parent">
+                            <span class="slds-form-element__label">Phone</span>
+                            <div class="slds-form-element__control">
+                                <apex:inputField styleClass="slds-input" value="{!Contact.Phone}"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-p-horizontal--small slds-size--1-of-2">
+                        <div class="slds-form-element slds-hint-parent">
+                            <span class="slds-form-element__label">Mailing City</span>
+                            <div class="slds-form-element__control">
+                                <apex:inputField styleClass="slds-input" value="{!Contact.MailingCity}"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-p-horizontal--small slds-size--1-of-2">
+                        <div class="slds-form-element slds-hint-parent">
+                            <span class="slds-form-element__label">Mobile</span>
+                            <div class="slds-form-element__control">
+                                <apex:inputField styleClass="slds-textarea" value="{!Contact.MobilePhone}"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-p-horizontal--small slds-size--1-of-2">
+                        <div class="slds-form-element slds-hint-parent">
+                            <span class="slds-form-element__label">Mailing State</span>
+                            <div class="slds-form-element__control">
+                                <apex:inputField styleClass="slds-input" value="{!Contact.MailingState}"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-p-horizontal--small slds-size--1-of-2">
+                        <div class="slds-form-element slds-hint-parent">
+                            <span class="slds-form-element__label">Other Phone</span>
+                            <div class="slds-form-element__control">
+                                <apex:inputField styleClass="slds-input" value="{!Contact.OtherPhone}"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-p-horizontal--small slds-m-top--medium slds-size--1-of-1 slds-align--absolute-center">
+                        <apex:commandButton styleClass="slds-button slds-button--neutral" value="Cancel" action="{!cancel}" />
+                        <apex:commandButton styleClass="slds-button slds-button--brand" value="Save" action="{!save}" />
+                    </div>
+                </div>
+            </apex:form>
+        </body>
+    </html>
+</apex:page>
