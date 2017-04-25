@@ -59,7 +59,7 @@
     gotStages : function(cmp, helper, stages) {
         console.log('Got stages ' + JSON.stringify(stages));
         cmp.set('v.Stages', stages);
-        cmp.set('v.ColumnWidths', stages.length);
+        cmp.set('v.ColumnWidth', stages.length);
     },
     // helper method to extract a parameter from the URL
     getURLParameter : function(param, defaultValue) {
