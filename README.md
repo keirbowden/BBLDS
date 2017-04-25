@@ -1,9 +1,40 @@
 # Bob Buzzard's Lightning Design System Samples
 
+Note: If the org you are installing into has a packaging namespace, you'll need to update the various lightning out applications to use the namespace, or you will get an empty page with an error in the JavaScript console.  For example, if the packaging namespace is bblightning the BBLeadBoardApp code needs to be changed to use this namespace from:
+
+    $Lightning.use("c:BBSObjectBoardOutApp", function() {
+            $Lightning.createComponent("c:BBSObjectBoard",
+                                       {
+								'SObjectType': 'Lead',
+								'StageValueField' : 'Status',
+								'FieldNames' : 'Company, FirstName, LastName, LeadSource',
+								'ExcludeValues': 'Converted',
+										},
+                  "lightning",
+                  function(cmp) {
+                    // no further setup required - yet!
+              });
+        });
+
+to:
+
+    $Lightning.use("bblightning:BBSObjectBoardOutApp", function() {
+            $Lightning.createComponent("bblightning:BBSObjectBoard",
+                                       {
+								'SObjectType': 'Lead',
+								'StageValueField' : 'Status',
+								'FieldNames' : 'Company, FirstName, LastName, LeadSource',
+								'ExcludeValues': 'Converted',
+										},
+                  "lightning",
+                  function(cmp) {
+                    // no further setup required - yet!
+              });
+
 ## Getting Started
 Install the unmanaged package via the following link :
 
-https://login.salesforce.com/packaging/installPackage.apexp?p0=04t24000000ApM1
+https://login.salesforce.com/packaging/installPackage.apexp?p0=04t24000000AqHA
 
 (If you've installed an earlier version, you'll need to uninstall that before installing the latest, as unmanaged packages can't be upgraded.
 
